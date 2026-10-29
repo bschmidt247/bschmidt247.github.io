@@ -1,9 +1,29 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .generate {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+  }
+    </style>
 </head>
 <body>
 <div>
@@ -35,9 +55,9 @@ function randomValueFromArray(array) {
 }
 
 // Raw text strings
-const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
-const places = ["the soup kitchen", "Disneyland", "the White House"];
-const events = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"];
+const characters = ["Jake from State Farm", "Erik Cartman", "SpongeBob SquarePants"];
+const places = ["broncos stadium", "water world", "the Grand Canyon"];
+const events = ["imploded", "snapped in half and turned into a butterfly", "yelled in surprise and jumped back"];
 
 // Willy the Goblin
 // Big Daddy
