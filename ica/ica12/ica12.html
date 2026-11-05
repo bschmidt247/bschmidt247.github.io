@@ -124,6 +124,7 @@
       </div>
       <script>
         const newBtn = document.querySelector("#js-new-quote").addEventListener("click", getQuote);
+        const tweetBtn = document.querySelector("#js-tweet").addEventListener("click", showAnswer);
 
         const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
 
@@ -142,10 +143,25 @@
             alert("Failed to fetch new quote");
          }
         }
+
+         async function showAnswer() {
+         console.log("This func Worked");
+         try {
+            const response = await fetch(endpoint);
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            const json = await response.json();
+            console.log(json);
+            displayQuote(json['answer']);
+         } catch (error) {
+            console.log(error)
+            alert("Failed to fetch an answer");
+         }
+        }
         function displayQuote(quote) {
             const quoteText = document.querySelector("#js-quote-text");
             quoteText.textContent = quote;
-    
         }
         getQuote();
         </script>
